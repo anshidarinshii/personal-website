@@ -4,13 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Sticky header shadow/blur on scroll */
   const header = document.querySelector('.site-header');
   const backToTop = document.querySelector('.back-to-top');
+  const progressBar = document.getElementById('scroll-progress');
   const onScroll = () => {
     const scrolled = window.scrollY > 24;
     if (header) header.classList.toggle('scrolled', scrolled);
     if (backToTop) backToTop.classList.toggle('show', window.scrollY > 480);
+    if (progressBar) {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* Cursor spotlight in hero */
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('pointermove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      heroSection.style.setProperty('--mx', x + '%');
+      heroSection.style.setProperty('--my', y + '%');
+    });
+  }
+
+  /* Tilt-on-hover for cards */
+  const tiltEls = document.querySelectorAll('.card, .project-card');
+  tiltEls.forEach((el) => {
+    el.addEventListener('pointerenter', () => {
+      el.style.transition = 'transform 0.1s ease-out';
+    });
+    el.addEventListener('pointermove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.transform = `perspective(700px) rotateX(${(-py * 7).toFixed(2)}deg) rotateY(${(px * 7).toFixed(2)}deg) translateY(-4px)`;
+    });
+    el.addEventListener('pointerleave', () => {
+      el.style.transition = 'transform 0.4s var(--ease)';
+      el.style.transform = '';
+    });
+  });
 
   /* Mobile nav toggle */
   const toggle = document.querySelector('.nav-toggle');
