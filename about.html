@@ -1,61 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - ANSHIDA RINSHI</title>
-    <!-- Link to Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link to Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Anshida Rinshi</title>
+<meta name="description" content="About Anshida Rinshi — education, experience, certifications and skills.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0d'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Georgia,serif' fill='%23ffc94d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo" height="80px">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">HOME</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">PROJECTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">CONTACT ME</a>
-                </li>
-            </ul>
-        </div>
+<div class="bg-glow"></div>
+<div class="noise"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Anshida Rinshi"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="files/Anshida-Rinshi-Resume.pdf" class="btn btn-primary btn-sm nav-cta" download>Resume</a>
     </nav>
+  </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about" class="hero">
-        <div class="container text-center">
-            <h1 class="display-4">About Me</h1>
-            <p class="lead">
-                Hello, I'm ANSHIDA RINSHI, a passionate and skilled web developer with expertise in building dynamic and user-friendly websites. With a strong foundation in both front-end and back-end development, I strive to create websites that are not only functional but also visually appealing. I have experience working with various programming languages and frameworks like HTML, CSS, JavaScript, and React.
-            </p>
-            <p class="lead">
-                In addition to web development, I am constantly exploring new technologies and trends in the industry. My goal is to continuously improve my skills and create innovative solutions for clients. Whether you need a personal portfolio, an e-commerce site, or a full-fledged web application, I am here to help bring your vision to life.
-            </p>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-reveal style="justify-content:center;">About Me</div>
+      <h1 data-reveal>Turning ideas into working products</h1>
+      <p data-reveal data-reveal-delay="1">BTech Computer Science Engineering student at Govt. Model Engineering College, Kochi (KTU), with hands-on experience across full-stack development, applied AI and cybersecurity fundamentals.</p>
+    </div>
+  </section>
+
+  <!-- Bio + what I do -->
+  <section class="section-tight">
+    <div class="container grid-2" style="align-items:center;">
+      <div data-reveal>
+        <div class="eyebrow">Profile</div>
+        <h2>Hello, I'm Anshida</h2>
+        <p>I'm a Computer Science Engineering student who enjoys building things end to end — from REST APIs and databases to the interfaces people actually use. I've interned across an ERP-focused startup and a Django-based development team, and I ship personal projects for fun: a retrieval-augmented document Q&amp;A app, an LLM accuracy-evaluation pipeline wired into Zoho Books, and a handful of full-stack products and hackathon builds.</p>
+        <p>Outside of coursework, I've taken part in Kerala's largest women's hackathon, Tink-Her-Hack 3.0 — where I built and shipped <a href="https://doctrace.onrender.com" target="_blank" rel="noopener" class="text-accent">DocTrace</a>, a lost-and-found platform, live in one weekend — and an overnight build sprint at Foss-Hack. I like the pressure of building something real, fast, with a team.</p>
+        <div class="hero-actions">
+          <a href="files/Anshida-Rinshi-Resume.pdf" class="btn btn-primary" download>Download CV</a>
+          <a href="contact.html" class="btn btn-ghost">Contact Me</a>
         </div>
-    </section>
+      </div>
+      <div class="grid-2" style="gap:16px;" data-reveal data-reveal-delay="1">
+        <div class="card" style="padding:22px;">
+          <div class="icon-badge">🎓</div>
+          <h3 style="font-size:1rem;">CGPA</h3>
+          <p style="font-size:0.85rem;">7.87 · KTU B.Tech CSE</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div class="icon-badge">🏢</div>
+          <h3 style="font-size:1rem;">Internships</h3>
+          <p style="font-size:0.85rem;">Centrric Innovations · Hash Tech Global</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div class="icon-badge">🛠️</div>
+          <h3 style="font-size:1rem;">Projects</h3>
+          <p style="font-size:0.85rem;">10+ repos — DocuMind, DocTrace &amp; more</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div class="icon-badge">🏆</div>
+          <h3 style="font-size:1rem;">Hackathons</h3>
+          <p style="font-size:0.85rem;">Tink-Her-Hack 3.0 · Foss-Hack 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <p>&copy; 2024 ANSHIDA RINSHI | All Rights Reserved</p>
-    </footer>
+  <!-- Skills -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Skills</div>
+        <h2>Technologies I work with</h2>
+      </div>
+      <div class="skills-wrap" data-reveal>
+        <span class="skill-pill"><span class="dot"></span>React</span>
+        <span class="skill-pill"><span class="dot"></span>Node.js</span>
+        <span class="skill-pill"><span class="dot"></span>Express.js</span>
+        <span class="skill-pill"><span class="dot"></span>Next.js</span>
+        <span class="skill-pill"><span class="dot"></span>TypeScript</span>
+        <span class="skill-pill"><span class="dot"></span>Django</span>
+        <span class="skill-pill"><span class="dot"></span>Flask</span>
+        <span class="skill-pill"><span class="dot"></span>FastAPI</span>
+        <span class="skill-pill"><span class="dot"></span>Python</span>
+        <span class="skill-pill"><span class="dot"></span>C++</span>
+        <span class="skill-pill"><span class="dot"></span>JavaScript (ES6+)</span>
+        <span class="skill-pill"><span class="dot"></span>MongoDB</span>
+        <span class="skill-pill"><span class="dot"></span>MySQL</span>
+        <span class="skill-pill"><span class="dot"></span>REST APIs</span>
+        <span class="skill-pill"><span class="dot"></span>Firebase</span>
+        <span class="skill-pill"><span class="dot"></span>TensorFlow.js</span>
+        <span class="skill-pill"><span class="dot"></span>Tailwind CSS</span>
+        <span class="skill-pill"><span class="dot"></span>Git &amp; GitHub</span>
+        <span class="skill-pill"><span class="dot"></span>Flutter</span>
+      </div>
+      <p style="margin-top:26px; font-size:0.85rem; font-weight:600; color:var(--text-faint); letter-spacing:0.04em; text-transform:uppercase;" data-reveal>Soft skills</p>
+      <div class="soft-skills" data-reveal>
+        <span>Adaptability</span><span>Communication</span><span>Collaboration</span><span>Problem Solving</span><span>Creativity</span><span>Decision Making</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- Link to Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Experience -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Experience</div>
+        <h2>Where I've worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal>
+          <span class="timeline-date">5 Months</span>
+          <h3>Intern, Centrric Innovations Pvt Ltd</h3>
+          <span class="timeline-org">Kochi · React, HTML, CSS, ERPNext, Git, GitHub, Flutter</span>
+          <p>Developed an ERPNext-based POS frontend with REST API integration, and built a Flutter-based CRM application for sales users — integrating frontend workflows with backend ERP modules.</p>
+        </div>
+        <div class="timeline-item" data-reveal data-reveal-delay="1">
+          <span class="timeline-date">1 Month</span>
+          <h3>Intern, Hash Tech Global</h3>
+          <span class="timeline-org">Calicut · Python, Django, SQLite</span>
+          <p>Contributed to the development of a Django-based web application, implementing application features and backend functionality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Education</div>
+        <h2>Academic background</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal>
+          <span class="timeline-date">2027 (Expected)</span>
+          <h3>B.Tech, Computer Science Engineering</h3>
+          <span class="timeline-org">Govt. Model Engineering College, Kochi · KTU · CGPA 7.87</span>
+        </div>
+        <div class="timeline-item" data-reveal data-reveal-delay="1">
+          <span class="timeline-date">2023</span>
+          <h3>12th Grade — 98.9%</h3>
+          <span class="timeline-org">Subulussalam Higher Secondary School, Moorkanad</span>
+        </div>
+        <div class="timeline-item" data-reveal data-reveal-delay="2">
+          <span class="timeline-date">2021</span>
+          <h3>10th Grade — 100%</h3>
+          <span class="timeline-org">Sullamussalam Higher Secondary School, Areekode</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & achievements -->
+  <section class="section">
+    <div class="container grid-2">
+      <div data-reveal>
+        <div class="eyebrow">Certifications</div>
+        <h2 style="font-size:1.4rem; margin-bottom:20px;">Courses &amp; Certifications</h2>
+        <div class="ach-list">
+          <div class="ach-item">
+            <div class="mark">✓</div>
+            <p><b>AI For All</b> — Ministry of Education, CBSE &amp; Intel. Certified in AI Aware and AI Appreciate.</p>
+          </div>
+          <div class="ach-item">
+            <div class="mark">✓</div>
+            <p><b>Cybersecurity Analyst Job Simulation</b> — Forage. IAM fundamentals, strategy assessment, custom IAM solutions and platform integration.</p>
+          </div>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="1">
+        <div class="eyebrow">Achievements</div>
+        <h2 style="font-size:1.4rem; margin-bottom:20px;">Achievements &amp; Activities</h2>
+        <div class="ach-list">
+          <div class="ach-item">
+            <div class="mark">🏆</div>
+            <p><b>Tink-Her-Hack 3.0 (2025)</b> — Kerala's largest women's hackathon, organised by Tinker Hub at Tinker Space, Kochi.</p>
+          </div>
+          <div class="ach-item">
+            <div class="mark">🏆</div>
+            <p><b>Foss-Hack 2025</b> — An overnight hackathon organised by FOSS United.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Anshida Rinshi">
+        <p>Full-stack developer &amp; BTech CSE student, building web products with React, Node.js and Django.</p>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:anshidarinshi.mec@gmail.com" aria-label="Email">📧</a>
+        <a href="https://www.linkedin.com/in/anshidarinshi03/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/anshidarinshii" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Anshida Rinshi. All rights reserved.</span>
+      <span>Built with HTML, CSS &amp; JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script src="js/main.js"></script>
 </body>
 </html>

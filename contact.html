@@ -1,105 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Anshida Rinshi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .contact-section {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .contact-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-card h2 {
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .contact-card p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
-        .contact-card a {
-            display: block;
-            font-weight: 500;
-            color: #007bff;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .contact-card a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Anshida Rinshi</title>
+<meta name="description" content="Get in touch with Anshida Rinshi — email, LinkedIn and GitHub.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0d'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Georgia,serif' fill='%23ffc94d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="bg-white shadow-sm py-3 sticky-top">
-        <nav class="container navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Logo" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="projects.html">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold active" href="contact.html">CONTACT ME</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<div class="bg-glow"></div>
+<div class="noise"></div>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <div class="contact-card">
-                        <h2>Contact Me</h2>
-                        <p>Feel free to get in touch!</p>
-                        <ul class="list-unstyled">
-                            <li>
-                                <strong>Email:</strong> 
-                                <a href="mailto:anshidarinshi@gmail.com">anshidarinshi@gmail.com</a>
-                            </li>
-                            <li>
-                                <strong>LinkedIn:</strong> 
-                                <a href="https://www.linkedin.com/in/anshidarinshi03/" target="_blank">Visit My LinkedIn Profile</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Anshida Rinshi"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="files/Anshida-Rinshi-Resume.pdf" class="btn btn-primary btn-sm nav-cta" download>Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-reveal style="justify-content:center;">Contact</div>
+      <h1 data-reveal>Let's talk</h1>
+      <p data-reveal data-reveal-delay="1">Open to internships, freelance collaborations, and interesting full-stack or AI projects. Reach out — I usually reply within a day or two.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card" data-reveal>
+          <div class="icon-badge">📧</div>
+          <div>
+            <h3>Email</h3>
+            <p>anshidarinshi.mec@gmail.com</p>
+            <button class="copy-btn" data-copy="anshidarinshi.mec@gmail.com">Copy email</button>
+          </div>
         </div>
-    </section>
+        <div class="contact-card" data-reveal data-reveal-delay="1">
+          <div class="icon-badge">in</div>
+          <div>
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/anshidarinshi03/" target="_blank" rel="noopener">linkedin.com/in/anshidarinshi03</a></p>
+          </div>
+        </div>
+        <div class="contact-card" data-reveal>
+          <div class="icon-badge">🐙</div>
+          <div>
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/anshidarinshii" target="_blank" rel="noopener">github.com/anshidarinshii</a></p>
+          </div>
+        </div>
+        <div class="contact-card" data-reveal data-reveal-delay="1">
+          <div class="icon-badge">📍</div>
+          <div>
+            <h3>Location</h3>
+            <p>Kochi, Kerala, India</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="cta-band" style="margin-top:40px;" data-reveal>
+        <h2>Prefer email?</h2>
+        <p>The fastest way to reach me is a direct email — I'll get back to you as soon as I can.</p>
+        <div class="actions">
+          <a href="mailto:anshidarinshi.mec@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="files/Anshida-Rinshi-Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Anshida Rinshi">
+        <p>Full-stack developer &amp; BTech CSE student, building web products with React, Node.js and Django.</p>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:anshidarinshi.mec@gmail.com" aria-label="Email">📧</a>
+        <a href="https://www.linkedin.com/in/anshidarinshi03/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/anshidarinshii" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Anshida Rinshi. All rights reserved.</span>
+      <span>Built with HTML, CSS &amp; JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script src="js/main.js"></script>
 </body>
 </html>

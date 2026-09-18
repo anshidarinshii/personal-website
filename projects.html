@@ -1,41 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Anshida Rinshi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Anshida Rinshi</title>
+<meta name="description" content="Projects by Anshida Rinshi — DocuMind, a bill-extraction LLM evaluation, DocTrace, Eco-Bin, Prompt Flow, TrackWise and more.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0d'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Georgia,serif' fill='%23ffc94d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-white shadow-sm py-3 sticky-top">
-        <nav class="container navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">  <img src="images/logo.png" alt="Logo" height="50"> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="about.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="projects.html">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="contact.html">CONTACT ME</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<div class="bg-glow"></div>
+<div class="noise"></div>
 
-    <section class="hero d-flex align-items-center" style="min-height: 100vh;">  </section>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Anshida Rinshi"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="files/Anshida-Rinshi-Resume.pdf" class="btn btn-primary btn-sm nav-cta" download>Resume</a>
+    </nav>
+  </div>
+</header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow" data-reveal style="justify-content:center;">Projects</div>
+      <h1 data-reveal>Things I've designed, built and shipped</h1>
+      <p data-reveal data-reveal-delay="1">A mix of AI-powered apps, full-stack platforms and hackathon builds — solo and in teams. Every project below is real and linked to its source on GitHub.</p>
+    </div>
+  </section>
+
+  <!-- Featured case studies -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid-2" id="documind" style="margin-bottom:26px;">
+        <div class="card" data-reveal style="grid-column: 1 / -1;">
+          <span class="project-tag">Retrieval-Augmented Generation</span>
+          <h3 style="font-size:1.4rem; margin:14px 0 10px;">DocuMind — Document Q&amp;A with cited sources</h3>
+          <p style="max-width:70ch;">A RAG app: upload a PDF, and the backend extracts and chunks its text, embeds each chunk with Gemini, and stores the vectors in MongoDB. Ask a question in the chat-style frontend, and it retrieves the most relevant chunks, sends only that context to an LLM, and returns an answer with the exact source passages it used — or admits it doesn't know, rather than guessing.</p>
+          <div class="project-meta" style="margin:16px 0 20px;">
+            <span>Python · FastAPI</span><span>MongoDB (vector store)</span><span>SQLite (pipeline metadata)</span><span>Gemini embeddings</span><span>Groq LLM</span><span>React 19 + Vite</span>
+          </div>
+          <a href="https://github.com/anshidarinshii/documind" target="_blank" rel="noopener" class="project-link">View source on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-2" id="bill-extraction-eval" style="margin-bottom:26px;">
+        <div class="card" data-reveal style="grid-column: 1 / -1;">
+          <span class="project-tag">Applied AI · Evaluation &amp; Research</span>
+          <h3 style="font-size:1.4rem; margin:14px 0 10px;">Handwritten Bill Extraction &amp; Model Evaluation</h3>
+          <p style="max-width:70ch;">A pipeline that extracts structured data — vendor, invoice number, date, amount, GST details — from photos of handwritten Indian bills using vision-language models, then scores each model's accuracy field-by-field against manually verified ground truth. Gemini scored 84.6% overall accuracy vs. 72.1% for a free OpenRouter model, with the largest gaps on amount and currency — the fields costliest to get wrong. Verified end-to-end by pushing extracted expenses live into Zoho Books via its API.</p>
+          <div class="project-meta" style="margin:16px 0 20px;">
+            <span>Python</span><span>Gemini &amp; OpenRouter vision models</span><span>rapidfuzz scoring</span><span>Zoho Books API (OAuth2)</span>
+          </div>
+          <a href="https://github.com/anshidarinshii/bill-extraction-eval" target="_blank" rel="noopener" class="project-link">View source on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project grid -->
+  <section class="section-alt section-tight">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">More builds</div>
+        <h2>Hackathons, internships &amp; full-stack projects</h2>
+      </div>
+      <div class="grid-3">
+
+        <div class="project-card" data-reveal id="doctrace">
+          <div class="project-media" style="--tone-a:#6ee7b7;--tone-b:#34d399;"><span>DocTrace</span></div>
+          <div class="project-body">
+            <span class="project-tag">Tink-Her-Hack 3.0 · Live</span>
+            <h3>DocTrace</h3>
+            <p>A lost-and-found platform where finders post details of misplaced documents and losers search with filters — built with a teammate in one hackathon weekend and deployed live.</p>
+            <div class="project-meta"><span>Flask</span><span>Python</span><span>Team of 2</span></div>
+            <a href="https://doctrace.onrender.com" target="_blank" rel="noopener" class="project-link">Live demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://github.com/anshidarinshii/doctrace" target="_blank" rel="noopener" class="project-link">Source code
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="https://github.com/anshidarinshii/ecobin" target="_blank" rel="noopener" class="project-card" data-reveal data-reveal-delay="1">
+          <div class="project-media" style="--tone-a:#a7f3d0;--tone-b:#22c55e;"><span>Eco-Bin</span></div>
+          <div class="project-body">
+            <span class="project-tag">AI &amp; Sustainability · Hackathon</span>
+            <h3>Eco-Bin</h3>
+            <p>An AI-powered waste-management system integrating a Teachable Machine model for real-time waste classification, built in a 1-day hackathon sprint.</p>
+            <div class="project-meta"><span>React</span><span>TensorFlow.js</span><span>Firebase</span></div>
+            <span class="project-link">Source code
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="https://github.com/anshidarinshii/promptflow" target="_blank" rel="noopener" class="project-card" data-reveal data-reveal-delay="2">
+          <div class="project-media" style="--tone-a:#fbbf24;--tone-b:#f59e0b;"><span>Prompt Flow</span></div>
+          <div class="project-body">
+            <span class="project-tag">LLM Tooling · Team of 4</span>
+            <h3>Prompt Flow</h3>
+            <p>A modular prompt-optimisation framework for LLMs — task detection, prompt augmentation and semantic-ranking-based pruning across a React frontend and Django backend.</p>
+            <div class="project-meta"><span>React</span><span>Django</span><span>Python</span></div>
+            <span class="project-link">Source code
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="https://github.com/anshidarinshii/TrackWise" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <div class="project-media" style="--tone-a:#94a3b8;--tone-b:#475569;"><span>TrackWise</span></div>
+          <div class="project-body">
+            <span class="project-tag">Full-Stack · Solo</span>
+            <h3>TrackWise</h3>
+            <p>A personal finance tracker with session-based auth, bcrypt password hashing and prepared-statement queries — income/expense tracking with transaction history.</p>
+            <div class="project-meta"><span>Node.js</span><span>Express.js</span><span>MySQL</span></div>
+            <span class="project-link">Source code
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <div class="project-card" data-reveal data-reveal-delay="1">
+          <div class="project-media" style="--tone-a:#7dd3fc;--tone-b:#818cf8;"><span>Mentor-Mesh</span></div>
+          <div class="project-body">
+            <span class="project-tag">Full-Stack Platform · Team of 3</span>
+            <h3>Mentor-Mesh</h3>
+            <p>A mentorship platform with multi-role authentication, session scheduling and mentor-availability management, using role-based access control and dynamic dashboards.</p>
+            <div class="project-meta"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+          </div>
+        </div>
+
+        <a href="https://github.com/anshidarinshii/lavista-store" target="_blank" rel="noopener" class="project-card" data-reveal data-reveal-delay="2">
+          <div class="project-media" style="--tone-a:#f0abfc;--tone-b:#c084fc;"><span>Lavista</span></div>
+          <div class="project-body">
+            <span class="project-tag">In Progress</span>
+            <h3>Lavista Store</h3>
+            <p>An e-commerce storefront scaffold — Next.js App Router, TypeScript and Tailwind CSS, with CI (lint, typecheck, build) already wired up.</p>
+            <div class="project-meta"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span></div>
+            <span class="project-link">Source code
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2>Want the full story on any of these?</h2>
+        <p>I'm happy to walk through architecture decisions, trade-offs, or the code itself.</p>
+        <div class="actions">
+          <a href="https://github.com/anshidarinshii" target="_blank" rel="noopener" class="btn btn-primary">See All Repos on GitHub</a>
+          <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Anshida Rinshi">
+        <p>Full-stack developer &amp; BTech CSE student, building web products with React, Node.js and Django.</p>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:anshidarinshi.mec@gmail.com" aria-label="Email">📧</a>
+        <a href="https://www.linkedin.com/in/anshidarinshi03/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/anshidarinshii" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Anshida Rinshi. All rights reserved.</span>
+      <span>Built with HTML, CSS &amp; JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script src="js/main.js"></script>
 </body>
 </html>
