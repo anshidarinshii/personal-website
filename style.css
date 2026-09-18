@@ -669,19 +669,17 @@ ul { list-style: none; margin: 0; padding: 0; }
   margin-top: 60px;
 }
 .footer-social {
-  display: flex; justify-content: center; gap: 14px;
-  padding-bottom: 30px; margin-bottom: 24px;
-  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: center; gap: 10px;
 }
 .footer-social a {
-  width: 44px; height: 44px; border-radius: 12px;
+  width: 36px; height: 36px; border-radius: 10px;
   border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   transition: border-color 0.3s, transform 0.3s, color 0.3s;
   color: var(--text-muted);
 }
 .footer-social a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px) scale(1.06); }
-.footer-bottom { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; font-size: 0.8rem; color: var(--text-faint); }
+.footer-bottom { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; font-size: 0.8rem; color: var(--text-faint); }
 .footer-bottom a { color: var(--text-faint); }
 .footer-bottom a:hover { color: var(--accent); }
 
